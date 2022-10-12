@@ -18,6 +18,15 @@ if (annyang) {
       }
   };
     
+    var Balaikota = {
+        
+    'balaikota' : function(){
+          console.log("pindah tugu"); 
+          window.location = "web2.html"; 
+    
+      }
+  };
+    
     var Ijen = {
       
       'Jalan Ijen' : function(){
@@ -29,22 +38,11 @@ if (annyang) {
           
   };
     
-     var MonumenTentaraPelajar = {
+    var MonumenTentaraPelajar = {
       
       'Monumen Tentara Pelajar' : function(){
           console.log("pindah Monumen Tentara Pelajar"); 
           window.location = "web4.html"; 
-    
-      }
-      
-          
-  };
-    
-    var GerejaImmanuel = {
-      
-      'Gereja Immanuel' : function(){
-          console.log("pindah Gereja Immanuel"); 
-          window.location = "web5.html"; 
     
       }
       
@@ -58,14 +56,15 @@ if (annyang) {
           window.location = "web6.html"; 
     
       }
-        
-    };
+      
+          
+  };
 
   // Add our commands to annyang
     annyang.addCommands(Tugu);
+    annyang.addCommands(Balaikota);
     annyang.addCommands(Ijen);
     annyang.addCommands(MonumenTentaraPelajar);
-    annyang.addCommands(GerejaImmanuel);
     annyang.addCommands(MasjidJami);
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
@@ -86,7 +85,7 @@ if (annyang) {
   <body>
     <a-scene>
         
-        <a-sky src="Balaikota.JPG" rotation="0 -130 0"></a-sky> 
+        <a-sky src="gerejaimmanuel.JPG" rotation="0 -130 0"></a-sky> 
   <!--     <a-assets>
             <video id="monkey" autoplay loop="true" src="Monkeys360.mp4"> </video> 
         </a-assets>
