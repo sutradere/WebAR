@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, WebVR! • A-Frame</title>
-    <meta name="description" content="Hello, WebVR! • A-Frame">
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-<!--      <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> -->
+    <head>
+      <meta charset="utf-8">
+      <title>Hello, WebVR! • A-Frame</title>
+      <meta name="description" content="Hello, WebVR! • A-Frame">
+      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
       <script src="js/annyang.min.js"></script>
-<script>
-if (annyang) {
-  // Let's define our first command. First the text we expect, and then the function it should call
-  var Balaikota = {
+
+       <script>
+            if (annyang) {
+            // Let's define our first command. First the text we expect, and then the function it should call
+            
+        
+//    var Mulai = {
       
-      'balai kota' : function(){
-          console.log("pindah balaikota"); 
-          window.location = "web2.html"; 
+ //           'mulai' : function(){
+ //           console.log("Mulai aplikasi"); 
+//         window.location = "web2.html"; 
+//          document.getElementById("menuawal").opacity = 0;
+//                document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+
+    
+ //     }     
+        
+ //        };
+                
+    var Balaikota = {
+      
+            'balai kota' : function(){
+            console.log("pindah balaikota"); 
+//          window.location = "web2.html"; 
+//          document.getElementById("location").src="Balaikota.JPG";
+                document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+
     
       }
       
@@ -25,8 +43,9 @@ if (annyang) {
       
       'Jalan Ijen' : function(){
           console.log("pindah ijen"); 
-          window.location = "web3.html"; 
+//          window.location = "web3.html"; 
     
+          document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
       }
       
           
@@ -36,8 +55,9 @@ if (annyang) {
       
       'Monumen Tentara Pelajar' : function(){
           console.log("pindah Monumen Tentara Pelajar"); 
-          window.location = "web4.html"; 
+ //         window.location = "web4.html"; 
     
+          document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
       }
       
           
@@ -47,8 +67,9 @@ if (annyang) {
       
       'Gereja Immanuel' : function(){
           console.log("pindah Gereja Immanuel"); 
-          window.location = "web5.html"; 
+  //        window.location = "web5.html"; 
     
+          document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
       }
       
           
@@ -58,7 +79,9 @@ if (annyang) {
       
       'Masjid Jami' : function(){
           console.log("pindah Masjid Jami"); 
-          window.location = "web6.html"; 
+ //         window.location = "web6.html"; 
+          
+          document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
     
       }
       
@@ -71,33 +94,53 @@ if (annyang) {
     annyang.addCommands(MonumenTentaraPelajar);
     annyang.addCommands(GerejaImmanuel);
     annyang.addCommands(MasjidJami);
+                
+//    annyang.addCommands(Mulai);
 
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
 }
+            
 </script>
+        
       
       <style type="text/css">
-      @media only screen and (max-width: 480px) {
-  body {
-    background-color: lightblue;
-  }
-}
-  </style>
+        @media only screen and (max-width: 480px) {
+        body {
+            background-color: lightblue;
+            }
+          }
+    </style>     
+      
+    </head>
+    
+    <body>
       
       
-  </head>
-  <body>
     <a-scene>
         
         <a-sky src="Tugu.JPG" rotation="0 -130 0"></a-sky> 
-  <!--     <a-assets>
-            <video id="monkey" autoplay loop="true" src="Monkeys360.mp4"> </video> 
-        </a-assets>
+ 
+ <!--     <a-text value="ABC" scale="2 2 1" position="-3 2 -3"></a-text>
+        <a-entity geometry="primitive: box; depth: 0.01" text="value: aaaa" position="-2 2 -4"  dynamic-body></a-entity> 
         
-      <a-videosphere src="Monkeys360.mp4"></a-videosphere> -->
+          <a-entity bmfont-text="text: HELLO!; color: #333" position="-3 2 -3"></a-entity>
+     
+        <a-entity text="value: Hello World;" position="-3 2 -3"></a-entity> --> 
+ 
+        <a-entity
+            id = "menuawal"
+            geometry="primitive: plane; width: 4; height: auto"
+            material="color: blue"
+            position="0 0 -4"
+            text="value: Untuk menghilangkan UI ini, katakan 'Mulai'.">
+        </a-entity>
         
-    </a-scene>
-  </body>
+        
+        
+    </a-scene> 
+        
+      
+    </body>
 </html>
