@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-      <title>Hello, WebVR! • A-Frame</title>
-      <meta name="description" content="Hello, WebVR! • A-Frame">
-      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!--      <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> -->
       <script src="js/annyang.min.js"></script>
 
        <script>
+           var menuAktif = true;
+           
             if (annyang) {
             // Let's define our first command. First the text we expect, and then the function it should call
             
         
-//    var Mulai = {
+    var Menu = {
       
- //           'mulai' : function(){
- //           console.log("Mulai aplikasi"); 
+            'menu' : function(){
+           console.log("Mulai menu"); 
 //         window.location = "web2.html"; 
 //          document.getElementById("menuawal").opacity = 0;
-//                document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
-
-    
- //     }     
+//            document.querySelector("a-image").setAttribute("visible", true);
+            document.querySelector("a-image").emit("startanim002", null, false);
+            menuAktif = true;
+              }     
         
- //        };
+         };
+                
+        var TutupMenu = {
+      
+            'tutup' : function(){
+           console.log("Tutup menu"); 
+//         window.location = "web2.html"; 
+//          document.getElementById("menuawal").opacity = 0;
+//            document.querySelector("a-image").setAttribute("visible", false);
+            document.querySelector("a-image").emit("startanim001", null, true);
+            menuAktif = false;
+              }     
+        
+         };
+                
+    var Tugu = {
+    'tugu' : function(){
+          console.log("pindah tugu"); 
+          document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+    
+      }
+  };
                 
     var Balaikota = {
       
@@ -89,13 +113,16 @@
   };
 
   // Add our commands to annyang
+    annyang.addCommands(Menu);
+    annyang.addCommands(TutupMenu);
+    annyang.addCommands(Tugu);        
     annyang.addCommands(Balaikota);
     annyang.addCommands(Ijen);
     annyang.addCommands(MonumenTentaraPelajar);
     annyang.addCommands(GerejaImmanuel);
     annyang.addCommands(MasjidJami);
                 
-//    annyang.addCommands(Mulai);
+
 
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
@@ -127,15 +154,26 @@
         
           <a-entity bmfont-text="text: HELLO!; color: #333" position="-3 2 -3"></a-entity>
      
-        <a-entity text="value: Hello World;" position="-3 2 -3"></a-entity> --> 
- 
-        <a-entity
+        <a-entity text="value: Hello World;" position="-3 2 -3"></a-entity> -->
+        
+ <!--        <a-entity
             id = "menuawal"
             geometry="primitive: plane; width: 4; height: auto"
             material="color: blue"
             position="0 0 -4"
-            text="value: Untuk menghilangkan UI ini, katakan 'Mulai'.">
-        </a-entity>
+            text="align:center;value: Halo. Selamat datang di Malang VR. 
+                  Untuk menghilangkan UI ini, katakan 'Tutup'."
+            animation="property: material.opacity; to: 0.0; dur: 2000; loop: 0"> 
+        </a-entity> -->
+        
+        <a-image 
+            src="MENU sederhana.JPG"
+            position="0 0 -4"
+            width="4" 
+            height="1"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim001"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim002">
+        </a-image>    
         
         
         
