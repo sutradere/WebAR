@@ -9,112 +9,262 @@
       <script src="js/annyang.min.js"></script>
 
        <script>
-           var menuAktif = true;
+           
+           //initialisasi
+           var menuAktif = true; 
+           var daftarAktif = false;
+           var penjelasanAktif = false;
+           
+           var status = "Tugu";
            
             if (annyang) {
             // Let's define our first command. First the text we expect, and then the function it should call
             
         
-    var Menu = {
+                var Menu = {
       
-            'menu' : function(){
-           console.log("Mulai menu"); 
-//         window.location = "web2.html"; 
-//          document.getElementById("menuawal").opacity = 0;
-//            document.querySelector("a-image").setAttribute("visible", true);
-            document.querySelector("a-image").emit("startanim002", null, false);
-            menuAktif = true;
-              }     
+                    'menu' : function(){
+                        console.log("Mulai menu"); 
+                        
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        daftarAktif = false;
+                        penjelasanAktif = false;
+                        
+                        document.querySelector("#menuawal").emit("startanim002", null, false);
+                        menuAktif = true;
+                    }     
         
-         };
+                };
                 
-        var TutupMenu = {
+                var TutupMenu = {
       
-            'tutup' : function(){
-           console.log("Tutup menu"); 
-//         window.location = "web2.html"; 
-//          document.getElementById("menuawal").opacity = 0;
-//            document.querySelector("a-image").setAttribute("visible", false);
-            document.querySelector("a-image").emit("startanim001", null, true);
-            menuAktif = false;
-              }     
+                    'tutup' : function(){
+                        console.log("Tutup menu"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        penjelasanAktif = false;
+                    }     
         
-         };
+            };
                 
-    var Tugu = {
-    'tugu' : function(){
-          console.log("pindah tugu"); 
-          document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
-    
-      }
-  };
-                
-    var Balaikota = {
+                var Pindah = {
       
-            'balai kota' : function(){
-            console.log("pindah balaikota"); 
-//          window.location = "web2.html"; 
-//          document.getElementById("location").src="Balaikota.JPG";
-                document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                    'pindah' : function(){
+                        console.log("Menu pindah"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        penjelasanAktif = false;
+                        
+                        document.querySelector("#menutempat").emit("startanim004", null, true);
+                        daftarAktif = true;
+                    }     
+        
+            };
+                
+                var Penjelasan = {
+      
+                    'penjelasan' : function(){
+                        console.log("buka penjelasan");
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        
+                        if(status == "Tugu"){
+                        
+                            document.querySelector("#menupenjelasan").emit("startanim006", null, true);
+                                                      
+                        }
+                        else if(status == "Balaikota"){
+                        
+                            document.querySelector("#menupenjelasan2").emit("startanim008", null, true);
+                           
+                        }
+                        else if(status == "Ijen"){
+                        
+                            document.querySelector("#menupenjelasan3").emit("startanim0010", null, true);
+                           
+                        }
+                        else if(status == "Tentara"){
+                        
+                            document.querySelector("#menupenjelasan4").emit("startanim0012", null, true);
+                                                      
+                        }
+                        else if(status == "Gereja"){
+                        
+                            document.querySelector("#menupenjelasan5").emit("startanim0014", null, true);
+                           
+                        }
+                        else if(status == "Masjid"){
+                        
+                            document.querySelector("#menupenjelasan6").emit("startanim0016", null, true);
+                           
+                        }
+                        
+                           penjelasanAktif = true;
+                    }
+            };
+                
+                
+                var Tugu = {
+                    'tugu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Balaikota = {
+      
+                    'balai kota' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
 
-    
-      }
+                        }
+                    }
       
           
-  };
+            };
     
-    var Ijen = {
+                var Ijen = {
       
-      'Jalan Ijen' : function(){
-          console.log("pindah ijen"); 
-//          window.location = "web3.html"; 
-    
-          document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
-      }
-      
-          
-  };
-    
-    var MonumenTentaraPelajar = {
-      
-      'Monumen Tentara Pelajar' : function(){
-          console.log("pindah Monumen Tentara Pelajar"); 
- //         window.location = "web4.html"; 
-    
-          document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
-      }
+                    'Jalan Ijen' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
       
           
-  };
+            };
     
-    var GerejaImmanuel = {
+                var MonumenTentaraPelajar = {
       
-      'Gereja Immanuel' : function(){
-          console.log("pindah Gereja Immanuel"); 
-  //        window.location = "web5.html"; 
-    
-          document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
-      }
-      
-          
-  };
-    
-    var MasjidJami = {
-      
-      'Masjid Jami' : function(){
-          console.log("pindah Masjid Jami"); 
- //         window.location = "web6.html"; 
-          
-          document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
-    
-      }
+                    'Monumen Tentara Pelajar' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
       
           
-  };
+            };
+    
+                var GerejaImmanuel = {
+      
+                    'Gereja Immanuel' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+    
+                var MasjidJami = {                        
+      
+                    'Masjid Jami' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
 
   // Add our commands to annyang
     annyang.addCommands(Menu);
     annyang.addCommands(TutupMenu);
+    annyang.addCommands(Pindah); 
+    annyang.addCommands(Penjelasan);         
+                
     annyang.addCommands(Tugu);        
     annyang.addCommands(Balaikota);
     annyang.addCommands(Ijen);
@@ -149,32 +299,93 @@
         
         <a-sky src="Tugu.JPG" rotation="0 -130 0"></a-sky> 
  
- <!--     <a-text value="ABC" scale="2 2 1" position="-3 2 -3"></a-text>
-        <a-entity geometry="primitive: box; depth: 0.01" text="value: aaaa" position="-2 2 -4"  dynamic-body></a-entity> 
-        
-          <a-entity bmfont-text="text: HELLO!; color: #333" position="-3 2 -3"></a-entity>
-     
-        <a-entity text="value: Hello World;" position="-3 2 -3"></a-entity> -->
-        
- <!--        <a-entity
-            id = "menuawal"
-            geometry="primitive: plane; width: 4; height: auto"
-            material="color: blue"
-            position="0 0 -4"
-            text="align:center;value: Halo. Selamat datang di Malang VR. 
-                  Untuk menghilangkan UI ini, katakan 'Tutup'."
-            animation="property: material.opacity; to: 0.0; dur: 2000; loop: 0"> 
-        </a-entity> -->
         
         <a-image 
+            id = "menuawal"
             src="MENU sederhana.JPG"
-            position="0 0 -4"
+            position="0 0 4"
             width="4" 
             height="1"
             animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim001"
             animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim002">
         </a-image>    
         
+        <a-image 
+            id = "menutempat"
+            src= "Daftar%20Tempat%20Wisata.jpg"
+            position="0 2 -10"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim003"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim004">
+        </a-image> 
+        
+        <a-image 
+            id = "menupenjelasan"
+            src= "Slide2.JPG"
+            position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim005"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim006">
+        </a-image> 
+        
+        <a-image 
+            id = "menupenjelasan2"
+            src= "Slide3.jpg"
+            position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim007"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim008">
+        </a-image> 
+        
+         <a-image 
+            id = "menupenjelasan3"
+            src= "Slide4.jpg"
+           position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim009"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim0010">
+        </a-image> 
+        
+         <a-image 
+            id = "menupenjelasan4"
+            src= "Slide5.jpg"
+            position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim0011"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim0012">
+        </a-image> 
+        
+        <a-image 
+            id = "menupenjelasan5"
+            src= "Slide6.jpg"
+            position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim0013"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim0014">
+        </a-image> 
+        
+        <a-image 
+            id = "menupenjelasan6"
+            src= "Slide7.jpg"
+            position="0 2 -14"
+            width="16" 
+            height="9"
+            opacity="0.0"
+            animation__hilang="property: material.opacity; to: 0.0; dur: 1000; loop: 0; startEvents: startanim0015"
+            animation__muncul="property: material.opacity; to: 1.0; dur: 1000; loop: 0; startEvents: startanim0016">
+        </a-image> 
         
         
     </a-scene> 
