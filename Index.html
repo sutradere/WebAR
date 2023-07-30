@@ -7,6 +7,10 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <!--      <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script> -->
       <script src="js/annyang.min.js"></script>
+      
+      <script>
+      
+      </script>
 
        <script>
            
@@ -62,9 +66,84 @@
                         menuAktif = false;
                         daftarAktif = false;
                         penjelasanAktif = false;
-                    }     
+                    }                  
+                    
         
             };
+                
+                var TutupMenu2 = {
+      
+                    'tutup menu' : function(){
+                        console.log("Tutup menu"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        penjelasanAktif = false;
+                    } 
+                    
+                    
+                    
+        
+            };
+                
+                var TutupMenu3 = {
+      
+                    'Malang 360 tutup' : function(){
+                        console.log("Tutup menu"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        penjelasanAktif = false;
+                    } 
+                    
+                    
+                    
+        
+            };
+                
+                var TutupMenu4 = {
+      
+                    'Saya ingin menutup menu' : function(){
+                        console.log("Tutup menu"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        penjelasanAktif = false;
+                    } 
+                    
+                    
+                    
+        
+            };
+                
+                
                 
                 var Pindah = {
       
@@ -88,9 +167,74 @@
         
             };
                 
+                var Pindah2 = {
+      
+                    'Buka menu tempat' : function(){
+                        console.log("Menu pindah"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        penjelasanAktif = false;
+                        
+                        document.querySelector("#menutempat").emit("startanim004", null, true);
+                        daftarAktif = true;
+                    }     
+        
+            };
+                var Pindah3 = {
+      
+                    'Malang 360 pindah' : function(){
+                        console.log("Menu pindah"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        penjelasanAktif = false;
+                        
+                        document.querySelector("#menutempat").emit("startanim004", null, true);
+                        daftarAktif = true;
+                    }     
+        
+            };
+                
+                var Pindah4 = {
+      
+                    'Saya ingin membuka menu tempat' : function(){
+                        console.log("Menu pindah"); 
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menupenjelasan").emit("startanim005", null, true);
+                        document.querySelector("#menupenjelasan2").emit("startanim007", null, true);
+                        document.querySelector("#menupenjelasan3").emit("startanim009", null, true);
+                        document.querySelector("#menupenjelasan4").emit("startanim0011", null, true);
+                        document.querySelector("#menupenjelasan5").emit("startanim0013", null, true);
+                        document.querySelector("#menupenjelasan6").emit("startanim0015", null, true);
+                        
+                        menuAktif = false;
+                        penjelasanAktif = false;
+                        
+                        document.querySelector("#menutempat").emit("startanim004", null, true);
+                        daftarAktif = true;
+                    }     
+        
+            };
+                
                 var Penjelasan = {
       
-                    'penjelasan' : function(){
+                    'Jelaskan' : function(){
                         console.log("buka penjelasan");
                         
                         document.querySelector("#menuawal").emit("startanim001", null, true);
@@ -134,6 +278,142 @@
                     }
             };
                 
+                var Penjelasan2 = {
+      
+                    'Buka menu penjelasan' : function(){
+                        console.log("buka penjelasan");
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        
+                        if(status == "Tugu"){
+                        
+                            document.querySelector("#menupenjelasan").emit("startanim006", null, true);
+                                                      
+                        }
+                        else if(status == "Balaikota"){
+                        
+                            document.querySelector("#menupenjelasan2").emit("startanim008", null, true);
+                           
+                        }
+                        else if(status == "Ijen"){
+                        
+                            document.querySelector("#menupenjelasan3").emit("startanim0010", null, true);
+                           
+                        }
+                        else if(status == "Tentara"){
+                        
+                            document.querySelector("#menupenjelasan4").emit("startanim0012", null, true);
+                                                      
+                        }
+                        else if(status == "Gereja"){
+                        
+                            document.querySelector("#menupenjelasan5").emit("startanim0014", null, true);
+                           
+                        }
+                        else if(status == "Masjid"){
+                        
+                            document.querySelector("#menupenjelasan6").emit("startanim0016", null, true);
+                           
+                        }
+                        
+                           penjelasanAktif = true;
+                    }
+            };
+                
+                var Penjelasan3 = {
+      
+                    'Malang 360 Jelaskan' : function(){
+                        console.log("buka penjelasan");
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        
+                        if(status == "Tugu"){
+                        
+                            document.querySelector("#menupenjelasan").emit("startanim006", null, true);
+                                                      
+                        }
+                        else if(status == "Balaikota"){
+                        
+                            document.querySelector("#menupenjelasan2").emit("startanim008", null, true);
+                           
+                        }
+                        else if(status == "Ijen"){
+                        
+                            document.querySelector("#menupenjelasan3").emit("startanim0010", null, true);
+                           
+                        }
+                        else if(status == "Tentara"){
+                        
+                            document.querySelector("#menupenjelasan4").emit("startanim0012", null, true);
+                                                      
+                        }
+                        else if(status == "Gereja"){
+                        
+                            document.querySelector("#menupenjelasan5").emit("startanim0014", null, true);
+                           
+                        }
+                        else if(status == "Masjid"){
+                        
+                            document.querySelector("#menupenjelasan6").emit("startanim0016", null, true);
+                           
+                        }
+                        
+                           penjelasanAktif = true;
+                    }
+            };
+                var Penjelasan4 = {
+      
+                    'Saya ingin membuka penjelasan' : function(){
+                        console.log("buka penjelasan");
+                        
+                        document.querySelector("#menuawal").emit("startanim001", null, true);
+                        document.querySelector("#menutempat").emit("startanim003", null, true);
+                        
+                        menuAktif = false;
+                        daftarAktif = false;
+                        
+                        if(status == "Tugu"){
+                        
+                            document.querySelector("#menupenjelasan").emit("startanim006", null, true);
+                                                      
+                        }
+                        else if(status == "Balaikota"){
+                        
+                            document.querySelector("#menupenjelasan2").emit("startanim008", null, true);
+                           
+                        }
+                        else if(status == "Ijen"){
+                        
+                            document.querySelector("#menupenjelasan3").emit("startanim0010", null, true);
+                           
+                        }
+                        else if(status == "Tentara"){
+                        
+                            document.querySelector("#menupenjelasan4").emit("startanim0012", null, true);
+                                                      
+                        }
+                        else if(status == "Gereja"){
+                        
+                            document.querySelector("#menupenjelasan5").emit("startanim0014", null, true);
+                           
+                        }
+                        else if(status == "Masjid"){
+                        
+                            document.querySelector("#menupenjelasan6").emit("startanim0016", null, true);
+                           
+                        }
+                        
+                           penjelasanAktif = true;
+                    }
+            };
                 
                 var Tugu = {
                     'tugu' : function(){
@@ -152,6 +432,134 @@
                         }
                     }
             };
+                
+                var Tugu2 = {
+                    'Malang 360 tugu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Tugu3 = {
+                    'Pindah ke Tugu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Tugu4 = {
+                    'Saya ingin pindah ke Tugu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                 var Tugu5 = {
+                    'nomor satu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Tugu6 = {
+                    'satu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Tugu7 = {
+                    'Pindah ke nomor satu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                var Tugu8 = {
+                    'Saya ingin pindah ke nomor satu' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){
+                            
+                            console.log("pindah tugu");                             
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Tugu.JPG"); 
+                            status = "Tugu";
+                        }
+                    }
+            };
+                
+                
                 
                 var Balaikota = {
       
@@ -173,10 +581,305 @@
       
           
             };
+                
+                var Balaikota2 = {
+      
+                    'Malang 360 balai kota' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota3 = {
+      
+                    'Pindah ke balai kota' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota4 = {
+      
+                    'Saya ingin pindah ke balai kota' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota5 = {
+      
+                    'nomor dua' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota6 = {
+      
+                    'dua' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota7 = {
+      
+                    'Pindah ke nomor dua' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+                
+                var Balaikota8 = {
+      
+                    'Saya ingin pindah ke nomor dua' : function(){
+                        
+                        console.log("sound heard"); 
+                        
+                        if(daftarAktif){ 
+                            console.log("pindah balaikota"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "Balaikota.JPG");
+                            status = "Balaikota";
+
+                        }
+                    }
+      
+          
+            };
+    
     
                 var Ijen = {
       
                     'Jalan Ijen' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen2 = {
+      
+                    'Pindah ke Jalan Ijen' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen3 = {
+      
+                    'Malang 360 Jalan Ijen' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen4 = {
+      
+                    'Saya ingin pindah ke Jalan Ijen' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen5 = {
+      
+                    'nomor 3' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen6 = {
+      
+                    'pindah ke nomor 3' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen7 = {
+      
+                    'tiga' : function(){ 
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                                            
+                            console.log("pindah ijen");   
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                                            
+                            document.querySelector("a-sky").setAttribute("src", "ijen.JPG");
+                            status = "Ijen";
+                        }
+                    }
+      
+          
+            };
+                
+                var Ijen8 = {
+      
+                    'Saya ingin pindah ke nomor 3' : function(){ 
                         
                         console.log("sound heard"); 
                     
@@ -215,10 +918,304 @@
       
           
             };
+                
+                var MonumenTentaraPelajar2 = {
+      
+                    'Malang 360 Monumen Tentara Pelajar' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar3 = {
+      
+                    'pindah ke Monumen Tentara Pelajar' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar4 = {
+      
+                    'Sya ingin pindah ke Monumen Tentara Pelajar' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar5 = {
+      
+                    'nomor 4' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar6 = {
+      
+                    'empat' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar7 = {
+      
+                    'pindah ke nomor 4' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
+                
+                var MonumenTentaraPelajar8 = {
+      
+                    'Saya ingin pindah ke nomor 4' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                    
+                            console.log("pindah Monumen Tentara Pelajar"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "monumenpelajar.JPG");
+                            status = "Tentara";
+                        }
+                    }
+      
+          
+            };
     
                 var GerejaImmanuel = {
       
                     'Gereja Immanuel' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel2 = {
+      
+                    'Malang 360 Gereja Immanuel' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel3 = {
+      
+                    'Pindah ke Gereja Immanuel' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel4 = {
+      
+                    'Saya ingin pindah ke gereja immanuel' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel5 = {
+      
+                    'Nomor 5' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel6 = {
+      
+                    'lima' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel7 = {
+      
+                    'pindah ke nomor 5' : function(){
+                        
+                        console.log("sound heard"); 
+                    
+                        if(daftarAktif){  
+                        
+                            console.log("pindah Gereja Immanuel"); 
+                            
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                        
+                            document.querySelector("a-sky").setAttribute("src", "gerejaimmanuel.JPG");
+                            status = "Gereja";
+                        }
+                    }
+      
+          
+            };
+                
+                var GerejaImmanuel8 = {
+      
+                    'Saya ingin pindah ke nomer 5' : function(){
                         
                         console.log("sound heard"); 
                     
@@ -260,20 +1257,246 @@
       
           
             };
+                
+                var MasjidJami2 = {                        
+      
+                    'Malang 360 Masjid Jami' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami3 = {                        
+      
+                    'pindah ke Masjid Jami' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami4 = {                        
+      
+                    'Saya ingin pindah ke Masjid Jami' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami5 = {                        
+      
+                    'Nomor 6' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami6 = {                        
+      
+                    'enam' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami7 = {                        
+      
+                    'pindah ke nomor 6' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
+                
+                var MasjidJami8 = {                        
+      
+                    'Saya ingin pindah ke nomor 6' : function(){
+                        
+                                            
+                    console.log("sound heard"); 
+                    
+                        if(daftarAktif){ 
+                            
+                            console.log("pindah Masjid Jami"); 
+                    
+                            document.querySelector("#menutempat").emit("startanim003", null, true);
+                            daftarAktif = false;
+                            
+                            document.querySelector("a-sky").setAttribute("src", "masjidjami.JPG");
+                            status = "Masjid";
+    
+                    
+                    }
+                }
+      
+          
+            };
 
   // Add our commands to annyang
     annyang.addCommands(Menu);
+                
     annyang.addCommands(TutupMenu);
+    annyang.addCommands(TutupMenu2);
+    annyang.addCommands(TutupMenu3);
+    annyang.addCommands(TutupMenu4);
+                
     annyang.addCommands(Pindah); 
-    annyang.addCommands(Penjelasan);         
+    annyang.addCommands(Pindah2);            
+    annyang.addCommands(Pindah3);            
+    annyang.addCommands(Pindah4);
                 
-    annyang.addCommands(Tugu);        
+    annyang.addCommands(Penjelasan);
+    annyang.addCommands(Penjelasan2);
+    annyang.addCommands(Penjelasan3);            
+    annyang.addCommands(Penjelasan4);            
+                
+    annyang.addCommands(Tugu);
+    annyang.addCommands(Tugu2);    
+    annyang.addCommands(Tugu3);    
+    annyang.addCommands(Tugu4);    
+    annyang.addCommands(Tugu5);    
+    annyang.addCommands(Tugu6);    
+    annyang.addCommands(Tugu7);    
+    annyang.addCommands(Tugu8);    
+                
     annyang.addCommands(Balaikota);
-    annyang.addCommands(Ijen);
-    annyang.addCommands(MonumenTentaraPelajar);
-    annyang.addCommands(GerejaImmanuel);
-    annyang.addCommands(MasjidJami);
+    annyang.addCommands(Balaikota2);    
+    annyang.addCommands(Balaikota3);    
+    annyang.addCommands(Balaikota4);    
+    annyang.addCommands(Balaikota5);    
+    annyang.addCommands(Balaikota6);    
+    annyang.addCommands(Balaikota7);    
+    annyang.addCommands(Balaikota8);             
                 
+    annyang.addCommands(Ijen);
+    annyang.addCommands(Ijen2);    
+    annyang.addCommands(Ijen3);    
+    annyang.addCommands(Ijen4);    
+    annyang.addCommands(Ijen5);    
+    annyang.addCommands(Ijen6);    
+    annyang.addCommands(Ijen7);    
+    annyang.addCommands(Ijen8);                                 
+                
+    annyang.addCommands(MonumenTentaraPelajar);
+    annyang.addCommands(MonumenTentaraPelajar2);    
+    annyang.addCommands(MonumenTentaraPelajar3);    
+    annyang.addCommands(MonumenTentaraPelajar4);    
+    annyang.addCommands(MonumenTentaraPelajar5);    
+    annyang.addCommands(MonumenTentaraPelajar6);    
+    annyang.addCommands(MonumenTentaraPelajar7);    
+    annyang.addCommands(MonumenTentaraPelajar8);              
+                
+    annyang.addCommands(GerejaImmanuel);
+    annyang.addCommands(GerejaImmanuel2);    
+    annyang.addCommands(GerejaImmanuel3);    
+    annyang.addCommands(GerejaImmanuel4);    
+    annyang.addCommands(GerejaImmanuel5);    
+    annyang.addCommands(GerejaImmanuel6);    
+    annyang.addCommands(GerejaImmanuel7);    
+    annyang.addCommands(GerejaImmanuel8);              
+                
+    annyang.addCommands(MasjidJami);
+    annyang.addCommands(MasjidJami2);    
+    annyang.addCommands(MasjidJami3);    
+    annyang.addCommands(MasjidJami4);    
+    annyang.addCommands(MasjidJami5);    
+    annyang.addCommands(MasjidJami6);    
+    annyang.addCommands(MasjidJami7);    
+    annyang.addCommands(MasjidJami8);              
 
 
 
